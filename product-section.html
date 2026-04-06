@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/navbar-style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+    <!-- ======================== NAVBAR ======================== -->
+    <header class="header-section">
+        <nav class="nav-bar-section">
+            <a href="#" class="logo-section">
+                <p class="logo-text">Furnish</p>
+                <p class="logo-text">Template</p>
+            </a>
+            <div class="navbar" id="header-navbar">
+                <button id="menu-close-button" class="fas fa-times"></button>
+                <ul class="list-items">
+                    <li id="hidden-logo">
+                        <a href="#" class="logo-section">
+                            <p class="logo-text">Furnish</p>
+                            <p class="logo-text">Template</p>
+                        </a>
+                    </li>
+                    <li class="list-option">
+                        <a href="./home-section.html" class="nav-link">HOME</a>
+                    </li>
+                    <li class="list-option">
+                        <a href="./about-section.html" class="nav-link">ABOUT US</a>
+                    </li>
+                    <li class="list-option">
+                        <a href="./product-section.html" class="nav-link active">PRODUCTS</a>
+                    </li>
+                    <li class="list-option">
+                        <a href="./testimony-section.html" class="nav-link">TESTIMONIALS</a>
+                    </li>
+                    <li class="list-option">
+                        <a href="./contact-section.html" class="nav-link">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="call-navbar">
+                <div class="call-section">
+                    <i class="fa-solid fa-phone phone"></i>
+                    <p class="call-text">+901234576</p>
+                </div>
+                <i id="menu-open-button" class="fa-solid fa-bars menu-bar"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ======================== PRODUCT LIST SECTION ======================== -->
+    <section class="section-container">
+        <div class="section-content">
+            <p class="title-description">Product List</p>
+            <p class="title-subdescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat ad sint quae sunt, molestiae consectetur vitae! Impedit nulla ea provident quis est eos dolores enim.</p>
+
+            <div class="testimony-section" id="product-section">
+
+                <!-- Filter Sidebar -->
+                <div class="filter-section">
+                    <p class="client-name">Filters</p>
+
+                    <!-- Filter — Category -->
+                    <div class="filter-category">
+                        <p class="class-title class-title-bold">CATEGORY</p>
+                        <a href="#">
+                            <p class="class-title">Living Room</p>
+                        </a>
+                        <a href="#">
+                            <p class="class-title">Bedroom</p>
+                        </a>
+                        <a href="#">
+                            <p class="class-title">Office</p>
+                        </a>
+                        <a href="#">
+                            <p class="class-title">Decor</p>
+                        </a>
+                    </div>
+
+                    <!-- Filter — Price Range -->
+                    <div class="filter-price">
+                        <p class="class-title class-title-bold">PRICE</p>
+                        <p class="class-title"><input type="checkbox" name="check-price-range" id="price-range-1"> Under $100</p>
+                        <p class="class-title"><input type="checkbox" name="check-price-range" id="price-range-2"> $100-$300</p>
+                        <p class="class-title"><input type="checkbox" name="check-price-range" id="price-range-3"> Above $300</p>
+                    </div>
+
+                    <!-- Filter — Color -->
+                    <div class="filter-color">
+                        <p class="class-title class-title-bold">COLOR</p>
+                        <p class="class-title"><input type="checkbox" name="check-color-range" id="color-range-1"> Gray</p>
+                        <p class="class-title"><input type="checkbox" name="check-color-range" id="color-range-2"> Black</p>
+                        <p class="class-title"><input type="checkbox" name="check-color-range" id="color-range-3"> Wood</p>
+                    </div>
+
+                    <button type="button" class="button" id="filters">Apply Filters</button>
+                </div>
+
+                <!-- Product Grid + Sort -->
+                <div class="selection-section">
+
+                    <!-- Sort Dropdown -->
+                    <div class="select-box">
+                        <select id="sort-select" aria-label="Sort products">
+                            <option value="featured">Sort by: Featured</option>
+                            <option value="best-selling">Best Selling</option>
+                            <option value="az">Alphabetically, A-Z</option>
+                            <option value="za">Alphabetically, Z-A</option>
+                            <option value="low-to-high">Price, low to high</option>
+                            <option value="high-to-low">Price, high to low</option>
+                            <option value="old-to-new">Date, old to new</option>
+                            <option value="new-to-old">Date, new to old</option>
+                        </select>
+                    </div>
+
+                    <!-- Product Cards Grid -->
+                    <div class="our-products-list">
+
+                        <!-- Product 1 — Modern Sofa -->
+                        <div class="products-options">
+                            <a href="#">
+                                <img src="./images/product-img-1.jpg" class="image-003" alt="Modern Sofa">
+                            </a>
+                            <div class="text-details">
+                                <p class="title-products-smaller">BRAND</p>
+                                <div class="product-more-details">
+                                    <a href="#">
+                                        <p class="title-subdescription">Modern Sofa</p>
+                                    </a>
+                                    <p class="class-title"><span>$59.00</span> $29.00</p>
+                                </div>
+                                <button type="button" class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 — Floor Lamp -->
+                        <div class="products-options">
+                            <a href="#">
+                                <img src="./images/product-img-2.jpg" class="image-003" alt="Floor Lamp">
+                            </a>
+                            <div class="text-details">
+                                <p class="title-products-smaller">BRAND</p>
+                                <div class="product-more-details">
+                                    <a href="#">
+                                        <p class="title-subdescription">Floor Lamp</p>
+                                    </a>
+                                    <p class="class-title"><span>$95.00</span> $89.00</p>
+                                </div>
+                                <button type="button" class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 — High Back Boss Chair -->
+                        <div class="products-options">
+                            <a href="#">
+                                <img src="./images/product-img-5.jpg" class="image-003" alt="High Back Boss Chair">
+                            </a>
+                            <div class="text-details">
+                                <p class="title-products-smaller">BRAND</p>
+                                <div class="product-more-details">
+                                    <a href="#">
+                                        <p class="title-subdescription">High Back Boss Chair</p>
+                                    </a>
+                                    <p class="class-title"><span>$78.00</span> $68.00</p>
+                                </div>
+                                <button type="button" class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 — Fancy Metal Clock -->
+                        <div class="products-options">
+                            <a href="#">
+                                <img src="./images/product-img-6.jpg" class="image-003" alt="Fancy Metal Clock">
+                            </a>
+                            <div class="text-details">
+                                <p class="title-products-smaller">BRAND</p>
+                                <div class="product-more-details">
+                                    <a href="#">
+                                        <p class="title-subdescription">Fancy Metal Clock</p>
+                                    </a>
+                                    <p class="class-title"><span>$78.00</span> $68.00</p>
+                                </div>
+                                <button type="button" class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Product 5 — Comfort Chair -->
+                        <div class="products-options">
+                            <a href="#">
+                                <img src="./images/product-img-3.jpg" class="image-003" alt="Comfort Chair">
+                            </a>
+                            <div class="text-details">
+                                <p class="title-products-smaller">BRAND</p>
+                                <div class="product-more-details">
+                                    <a href="#">
+                                        <p class="title-subdescription">Comfort Chair</p>
+                                    </a>
+                                    <p class="class-title"><span>$38.00</span> $28.00</p>
+                                </div>
+                                <button type="button" class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Product 6 — Modern Metal Frame Stool -->
+                        <div class="products-options">
+                            <a href="#">
+                                <img src="./images/product-img-7.jpg" class="image-003" alt="Modern Metal Frame Stool">
+                            </a>
+                            <div class="text-details">
+                                <p class="title-products-smaller">BRAND</p>
+                                <div class="product-more-details">
+                                    <a href="#">
+                                        <p class="title-subdescription">Modern Metal Frame Stool</p>
+                                    </a>
+                                    <p class="class-title"><span>$28.00</span> $28.00</p>
+                                </div>
+                                <button type="button" class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="custom-pagination" aria-label="Page navigation">
+                        <a href="#" class="page-btn" aria-label="Previous">&laquo;</a>
+                        <a href="#" class="page-btn active">1</a>
+                        <a href="#" class="page-btn">2</a>
+                        <a href="#" class="page-btn">3</a>
+                        <a href="#" class="page-btn" aria-label="Next">&raquo;</a>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <section class="footer-section">
+        <div class="footer-container">
+
+            <!-- Footer Top Row — Logo + Nav Links -->
+            <div class="semi-header">
+                <a href="#" class="logo-section">
+                    <p class="logo-text">Furnish</p>
+                    <p class="logo-text">Template</p>
+                </a>
+                <div class="navbar">
+                    <ul class="list-items">
+                        <li class="list-option">
+                            <a href="#" class="nav-link">Home</a>
+                        </li>
+                        <li class="list-option">
+                            <a href="#" class="nav-link">Services</a>
+                        </li>
+                        <li class="list-option">
+                            <a href="#" class="nav-link">Products</a>
+                        </li>
+                        <li class="list-option">
+                            <a href="#" class="nav-link">About Us</a>
+                        </li>
+                        <li class="list-option">
+                            <a href="#" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Middle Row — Tagline + Social Icons -->
+            <div class="semi-header">
+                <p class="xx-bold">
+                    <span>We Design all</span>
+                    <br>
+                    <span>over the world</span>
+                </p>
+                <div class="socials-logo">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+
+            <!-- Footer Email + Contact Button -->
+            <div class="semi-header">
+                <p class="xl-bold">
+                    <span class="l-bold">Email Id</span>
+                    <span class="x-bold">Info@example.com</span>
+                </p>
+                <button type="button" class="button">Contact us</button>
+            </div>
+
+            <!-- Footer Bottom Row — Copyright + Policy Links -->
+            <div class="semi-last-footer">
+                <p class="l-bold max-width">&copy; <span id="year"></span> Furnish. Developed by <a href="#" class="anchor-text">CodesCandy</a> &bull; Distributed by <a href="#" class="anchor-text">ThemeWagon</a>. All rights reserved.</p>
+                <div class="socials-logo">
+                    <p class="l-bold">Privacy Policy</p>
+                    <p class="l-bold">Terms of Service</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+</html>

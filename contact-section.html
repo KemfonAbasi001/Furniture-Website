@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./styles/navbar-style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- ======================== NAVBAR ======================== -->
+    <header class="header-section">
+        <nav class="nav-bar-section">
+            <a href="#" class="logo-section">
+                <p class="logo-text">Furnish</p>
+                <p class="logo-text">Template</p>
+            </a>
+            <div class="navbar" id="header-navbar">
+                <button id="menu-close-button" class="fas fa-times"></button>
+                <ul class="list-items">
+                    <li id="hidden-logo">
+                        <a href="#" class="logo-section">
+                            <p class="logo-text">Furnish</p>
+                            <p class="logo-text">Template</p>
+                        </a>
+                    </li>
+                    <li class="list-option">
+                        <a href="./home-section.html" class="nav-link">HOME</a>
+                    </li>
+                    <li class="list-option">
+                        <a href="./about-section.html" class="nav-link">ABOUT US</a>
+                    </li>
+                    <li class="list-option">
+                        <a href="./product-section.html" class="nav-link">PRODUCTS</a>
+                    </li>
+                    <li class="list-option">
+                        <a href="./testimony-section.html" class="nav-link">TESTIMONIALS</a>
+                    </li>
+                    <li class="list-option">
+                        <a href="./contact-section.html" class="nav-link active">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="call-navbar">
+                <div class="call-section">
+                    <i class="fa-solid fa-phone phone"></i>
+                    <p class="call-text">+901234576</p>
+                </div>
+                <i id="menu-open-button" class="fa-solid fa-bars menu-bar"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ======================== CONTACT SECTION ======================== -->
+    <section class="section-container">
+        <div class="section-content">
+            <p class="title-description">Contact Us</p>
+            <p class="title-subdescription">We'd love to hear from you! Get in touch with our team for any questions or feedback.</p>
+
+            <div class="testimony-section" id="contact-section">
+
+                <!-- Contact Info Sidebar -->
+                <div class="filter-section">
+                    <p class="client-name">Get in Touch</p>
+                    <p class="subtitle-one">Whether you have a question about our products, need assistance, or just want to talk furniture — we're here for you.</p>
+
+                    <!-- Address Details -->
+                    <div class="address-filter">
+
+                        <!-- Address -->
+                        <div class="home-address">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="address-text">
+                                <p class="class-title class-title-bold">ADDRESS</p>
+                                <p class="subtitle-one">123 Furniture Street, Mumbai, India</p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="email-address">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div class="address-text">
+                                <p class="class-title class-title-bold">EMAIL</p>
+                                <p class="subtitle-one">support@furnish.com</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="email-address">
+                            <i class="fa-solid fa-phone"></i>
+                            <div class="address-text">
+                                <p class="class-title class-title-bold">PHONE</p>
+                                <p class="subtitle-one">+91 98765 43210</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Contact Message Form -->
+                <div class="selection-section">
+                    <p class="client-name">Send a Message</p>
+                    <div class="form-fill">
+
+                        <!-- Name + Email Row -->
+                        <div class="name-email">
+                            <div class="name-form">
+                                <label for="fullname">
+                                    <p class="subtitle-one">Full Name</p>
+                                </label>
+                                <input type="text" name="fullname" id="fullname" placeholder="Your name">
+                            </div>
+                            <div class="email-form">
+                                <label for="email-fill">
+                                    <p class="subtitle-one">Email</p>
+                                </label>
+                                <input type="email" name="email-fill" id="email-fill" placeholder="you@example.com">
+                            </div>
+                        </div>
+
+                        <!-- Subject -->
+                        <div class="subject-section">
+                            <label for="subjects">
+                                <p class="subtitle-one">Subject</p>
+                            </label>
+                            <input type="text" name="subject" id="subjects" placeholder="Subject">
+                        </div>
+
+                        <!-- Message -->
+                        <div class="message-section">
+                            <label for="message">
+                                <p class="subtitle-one">Message</p>
+                            </label>
+                            <textarea name="message" id="message" placeholder="Write your message here"></textarea>
+                        </div>
+
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="button" class="send-message">Send Message</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <section class="footer-section">
+        <div class="footer-container">
+
+            <!-- Footer Top Row — Logo + Nav Links -->
+            <div class="semi-header">
+                <a href="#" class="logo-section">
+                    <p class="logo-text">Furnish</p>
+                    <p class="logo-text">Template</p>
+                </a>
+                <div class="navbar">
+                    <ul class="list-items">
+                        <li class="list-option">
+                            <a href="#" class="nav-link">Home</a>
+                        </li>
+                        <li class="list-option">
+                            <a href="#" class="nav-link">Services</a>
+                        </li>
+                        <li class="list-option">
+                            <a href="#" class="nav-link">Products</a>
+                        </li>
+                        <li class="list-option">
+                            <a href="#" class="nav-link">About Us</a>
+                        </li>
+                        <li class="list-option">
+                            <a href="#" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Middle Row — Tagline + Social Icons -->
+            <div class="semi-header">
+                <p class="xx-bold">
+                    <span>We Design all</span>
+                    <br>
+                    <span>over the world</span>
+                </p>
+                <div class="socials-logo">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+
+            <!-- Footer Email + Contact Button -->
+            <div class="semi-header">
+                <p class="xl-bold">
+                    <span class="l-bold">Email Id</span>
+                    <span class="x-bold">Info@example.com</span>
+                </p>
+                <button type="button" class="button">Contact us</button>
+            </div>
+
+            <!-- Footer Bottom Row — Copyright + Policy Links -->
+            <div class="semi-last-footer">
+                <p class="l-bold max-width">&copy; <span id="year"></span> Furnish. Developed by <a href="#" class="anchor-text">CodesCandy</a> &bull; Distributed by <a href="#" class="anchor-text">ThemeWagon</a>. All rights reserved.</p>
+                <div class="socials-logo">
+                    <p class="l-bold">Privacy Policy</p>
+                    <p class="l-bold">Terms of Service</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+</html>

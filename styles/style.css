@@ -1,0 +1,1227 @@
+/* === CSS VARIABLES === */
+
+:root {
+    --transition: 520ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* === SHARED / GLOBAL STYLES === */
+
+.section-container,
+.core-value {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0;
+    flex-direction: column;
+}
+
+#first-carousel {
+    padding: 70px 0 30px 0;
+}
+
+.section-content {
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* === ONE-TWO SLIDEE CAROUSEL (Home Hero Slider) === */
+
+.one-two {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.one-two .slidee {
+    display: none;
+}
+
+.one-two .slidee.slidee--active {
+    display: flex;
+}
+
+.slidee-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #211f1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.slidee-btn--prev { left: 0; }
+.slidee-btn--next { right: 0; }
+
+.slidee {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-direction: column;
+}
+
+.slidee img {
+    width: 600px;
+    height: 300px;
+}
+
+.x-title {
+    font-size: 3.2rem;
+    font-weight: 300;
+    max-width: 660px;
+    line-height: 75px;
+}
+
+.x-italics {
+    font-size: 2.5rem;
+    font-style: italic;
+    color: #d47f31;
+}
+
+.slidee-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 550px;
+    margin-top: -35px;
+}
+
+.slidee-details .class-title {
+    font-weight: 600;
+}
+
+/* === TYPOGRAPHY / TEXT UTILITY CLASSES === */
+
+.title-description {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    line-height: 50px;
+    font-weight: 300;
+}
+
+.title-subdescription {
+    font-size: 1.25rem;
+    /* background-color: red; */
+    margin: 6px 0;
+    max-width: 520px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #211f1cbf;
+}
+
+.title-one {
+    font-size: 1.9rem;
+    line-height: 37px;
+    font-weight: 400;
+}
+
+.subtitle-one {
+    font-size: 1.1rem;
+    color: #211f1cbf;
+    line-height: 24px;
+}
+
+.client-name {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.class-title span {
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+/* === FORM ELEMENTS (Input, Textarea, Placeholder) === */
+
+input {
+    box-sizing: border-box;
+    outline: none;
+    border: 0;
+    padding: 15px;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    height: 170px;
+    padding: 15px;
+    border: 1px solid rgb(236, 235, 233);
+    font-family: "Poppins", sans-serif;
+    outline-width: 2px;
+    outline-color: gray;
+}
+
+::placeholder {
+    font-size: 1.12rem;
+}
+
+/* === CAROUSEL WRAPPER (Home — Favorite Collection) === */
+
+.carousel-wrapper {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-viewport {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    transition: transform var(--transition);
+    will-change: transform;
+}
+
+/* === PRODUCT CARDS (Carousel Cards) === */
+
+.card {
+    flex: 0 0 calc((100% - 30px * 2) / 3);
+    overflow: hidden;
+    position: relative;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.card-image {
+    width: 100%;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* === CAROUSEL DOTS === */
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 36px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: black;
+    border: 0;
+}
+
+/* === HOME SECTION === */
+
+#carousel-second .section-content {
+    gap: 30px;
+}
+
+.carousel-section-text {
+    align-self: flex-start;
+    text-align: left;
+    max-width: 530px;
+}
+
+.carousel-section-text .title-subdescription {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.h-title {
+    font-size: 3.4rem;
+    line-height: 65px;
+    font-weight: 300;
+}
+
+/* === HOME — IMAGE BACKGROUND QUOTE BLOCK === */
+
+.imagebg_text {
+    background: url(../images/couch-with-cushions-glass-table.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-imgBg {
+    width: 60%;
+    padding: 45px 35px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 13px;
+    background-color: whitesmoke;
+}
+
+.testimony-text {
+    font-size: 1.05rem;
+    letter-spacing: .71px;
+    word-spacing: 1px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* === HOME — NEWSLETTER SECTION === */
+
+#newsletter-section {
+    padding: 100px 0;
+}
+
+#newsletter-section .section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.email-subscribe-btn {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+#email {
+    width: 40%;
+    padding: 17px 30px;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 1.12rem;
+    border: 1px solid rgb(236, 235, 233);
+}
+
+/* === ABOUT SECTION === */
+
+.about-us-section {
+    width: 90%;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.image-wrapper {
+    width: 48%;
+}
+
+.image-01 {
+    width: 100%;
+}
+
+.about-us-section-content {
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* === ABOUT — CORE VALUES === */
+
+.core-value {
+    background-color: #ecebe9;
+}
+
+.core-value,
+.our-team {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.core-value .value-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.value-content {
+    background-color: #ffffff;
+    padding: 45px 40px;
+}
+
+.value-content .client-name {
+    margin: 10px 0;
+}
+
+/* === ABOUT — OUR TEAM === */
+
+.our-team {
+    background-color: white;
+}
+
+.our-team-section {
+    margin-top: 30px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.our-team-content {
+    display: flex;
+    width: 44%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.our-team-content-one {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 35%;
+}
+
+.our-team-content-one .subtitle-one {
+    font-size: .9rem;
+}
+
+.image-002 {
+    border-radius: 50%;
+    width: 100%;
+}
+
+/* === TESTIMONIALS SECTION === */
+
+.testimony-section {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.testimony-section-one {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.client-testimony {
+    padding: 50px 40px;
+    box-sizing: border-box;
+    border: 1.5px solid #ECEBE9;
+}
+
+.client-testimony .client-name {
+    margin: 16px 0 3px 0;
+}
+
+/* === PRODUCTS SECTION === */
+
+#product-section {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 90px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* === PRODUCTS — FILTER SIDEBAR === */
+
+.filter-section {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: left;
+}
+
+.filter-section > div {
+    width: 100%;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    background-color: #ECEBE980;
+    border: 1px solid #d9d8d6;
+}
+
+.filter-category {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filter-category a {
+    color: black;
+    width: fit-content;
+}
+
+.filter-category a:hover {
+    text-decoration: underline;
+}
+
+input[type="checkbox"] {
+    accent-color: black;
+}
+
+.class-title-bold {
+    font-weight: 600;
+    font-size: .85rem;
+    margin-bottom: 6px;
+}
+
+.filter-section #filters {
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+/* === PRODUCTS — PRODUCT GRID === */
+
+.selection-section {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: fit-content;
+    align-items: center;
+}
+
+.selection-section .client-name{
+    align-self: flex-start;
+}
+
+.selection-section .select-box {
+    align-self: flex-end;
+}
+
+.select-box {
+    position: relative;
+    align-items: flex-end;
+}
+
+.select-box select {
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 0;
+    padding: 20px 30px 20px 16px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    outline: none;
+    min-width: 200px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.select-box::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-right: 1.5px solid #8a7f74;
+    border-bottom: 1.5px solid #8a7f74;
+    rotate: 45deg;
+    margin-top: -2px;
+    pointer-events: none;
+    transition: border-color 0.25s;
+}
+
+.our-products-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.products-options {
+    border: 1px solid #ECEBE9;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-003 {
+    width: 100%;
+}
+
+.text-details {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 15px;
+    /* background-color: red; */
+}
+
+.title-products-smaller {
+    font-size: .8rem;
+}
+
+.product-more-details {
+    /* margin: 1px 0 1px; */
+    text-align: start;
+    /* background-color: gold; */
+}
+
+.product-more-details .title-subdescription,
+.card-body .title-subdescription {
+    font-weight: 500;
+    font-size: 1.1rem;
+    /* background-color: red; */
+    color: black;
+}
+
+.product-more-details .title-subdescription:hover,
+.card-body .title-subdescription:hover {
+    color: #D47F31;
+    text-decoration: underline;
+}
+
+.add-to-cart {
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: .9rem;
+}
+
+/* === PRODUCTS — CUSTOM PAGINATION === */
+
+.custom-pagination {
+    display: flex;
+    align-items: center;
+    /* gap: 6px; */
+    margin-top: 30px;
+    align-self: center;
+}
+
+.page-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #d9d8d6;
+    color: #211f1c;
+    font-size: .95rem;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    background-color: white;
+}
+
+.page-btn:hover {
+    background-color: #ECEBE9;
+    color: #D47F31;
+}
+
+.page-btn.active {
+    background-color: black;
+    color: white;
+}
+
+/* === CONTACT SECTION === */
+
+#contact-section {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 90px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#contact-section .filter-section {
+    width: 35%;
+    gap: 18px;
+}
+
+#contact-section .selection-section {
+    width: 60%;
+    box-sizing: border-box;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(236, 235, 233);
+}
+
+#contact-section .address-filter {
+    background-color: transparent;
+    border: 0;
+    margin-top: 14px;
+    padding: 0;
+    display: flex;
+    gap: 17px;
+    flex-direction: column;
+}
+
+#contact-section input {
+    border: 1px solid rgb(236, 235, 233);
+}
+
+.address-filter i {
+    font-size: 1rem;
+    color: rgb(212, 127, 49);
+}
+
+.address-filter > div {
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+}
+
+.address-text {
+    width: 89%;
+}
+
+/* === CONTACT — MESSAGE FORM === */
+
+.form-fill {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: start;
+    align-items: start;
+    text-align: left;
+}
+
+.name-email {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-email > div {
+    width: 48.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.name-email input {
+    width: 100%;
+}
+
+.subject-section,
+.message-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.send-message {
+    width: 160px;
+    height: 52px;
+    color: white;
+    background-color: black;
+    font-size: 1.1rem;
+    align-self: flex-end;
+    transition: all .3s ease;
+}
+
+/* === RESPONSIVE — TABLET (575px–770px) === */
+
+@media (min-width: 575px) and (max-width: 770px) {
+    .our-products-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (min-width: 575px) and (max-width: 1000px) {
+    .text-imgBg {
+        width: 75%;
+    }
+}
+
+/* === RESPONSIVE — MOBILE (max 575px) === */
+
+@media screen and (max-width: 575px) {
+    .our-products-list {
+        grid-template-columns: 1fr;
+    }
+
+    .text-imgBg {
+        width: 85%;
+        padding: 45px 25px;
+    }
+}
+
+/* === RESPONSIVE — TABLET & BELOW (max 1000px) === */
+
+@media screen and (max-width: 1000px) {
+
+    .slidee img {
+        width: 300px;
+        height: 150px;
+    }
+
+    .slidee {
+        gap: 40px;
+    }
+
+    .slidee-details {
+        margin-top: -20px;
+    }
+
+    .slidee-details .button {
+        align-self: center;
+    }
+
+    .x-title {
+        font-size: 2.1rem;
+        line-height: 50px;
+    }
+
+    .x-italics {
+        font-size: 2rem;
+    }
+
+    .section-container,
+    .core-value {
+        padding: 50px 0;
+    }
+
+    .title-description {
+        font-size: 1.9rem;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+
+    .title-subdescription {
+        margin: 4px 0;
+        font-size: 1.3rem;
+    }
+
+    .product-more-details .title-subdescription,
+    .card-body .title-subdescription {
+        font-size: 1.25rem;
+    }
+
+    .h-title {
+        font-size: 2.5rem;
+        line-height: 50px;
+        margin-bottom: 5px;
+    }
+
+    .carousel-section-text .title-subdescription {
+        font-size: 1.2rem;
+    }
+
+    .subtitle-one {
+        line-height: 1.6rem;
+        font-size: 1.1rem;
+    }
+
+    .client-name {
+        font-size: 1.1rem;
+    }
+
+    /* About Section */
+
+    .about-us-section {
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .image-wrapper,
+    .about-us-section-content {
+        width: 100%;
+    }
+
+    .core-value .value-section {
+        flex-direction: column;
+    }
+
+    .value-content {
+        padding: 45px 40px;
+    }
+
+    .our-team-section {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .our-team-content {
+        width: 100%;
+    }
+
+    .our-team-content-one {
+        width: 47%;
+    }
+
+    /* Testimonials Section */
+
+    .testimony-section,
+    .testimony-section-one {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .testimony-section .loadMore {
+        align-self: center;
+    }
+
+    /* Products & Contact Sections */
+
+    #product-section,
+    #contact-section {
+        flex-direction: column;
+        margin-top: 60px;
+        gap: 40px;
+    }
+
+    .filter-section,
+    .selection-section,
+    #contact-section .filter-section,
+    #contact-section .selection-section {
+        width: 100%;
+    }
+
+    .selection-section .select-box {
+        align-self: flex-start;
+    }
+
+    .selection-section-header {
+        align-self: flex-start;
+    }
+
+    /* Newsletter Section */
+
+    .email-subscribe-btn {
+        flex-direction: column;
+    }
+
+    #email,
+    .email-subscribe-btn button {
+        width: 100%;
+    }
+
+    /* Contact Form */
+
+    .name-email {
+        flex-direction: column;
+    }
+
+    .name-email > div {
+        width: 100%;
+    }
+
+    /* Pagination */
+
+    .custom-pagination {
+        align-self: center;
+    }
+}
+
+
+
+
+
+/* ============================================================
+   FURNISH TEMPLATE — animations.css
+   Link AFTER style.css and navbar-style.css
+   ============================================================ */
+
+/* === KEYFRAMES === */
+
+/* Fade + float up — general section entrance */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide in from right — Meet Our Team cards */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Heartbeat pulse grow — About section image */
+@keyframes heartbeat {
+    0%   { transform: scale(1); }
+    14%  { transform: scale(1.06); }
+    28%  { transform: scale(1); }
+    42%  { transform: scale(1.04); }
+    70%  { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+
+/* Fade + scale in — Product images */
+@keyframes fadeScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.88);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Fade in from left — About text content */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Shimmer line — decorative underline on headings */
+@keyframes shimmerLine {
+    0%   { width: 0; left: 50%; }
+    50%  { width: 100%; left: 0; }
+    100% { width: 0; left: 50%; }
+}
+
+/* Gentle float — hero slider image */
+@keyframes floatY {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Slow pan — image background quote block */
+@keyframes bgPan {
+    0%   { background-position: center center; }
+    50%  { background-position: center 55%; }
+    100% { background-position: center center; }
+}
+
+/* Value card pop — Core Values */
+@keyframes popIn {
+    0%   { opacity: 0; transform: scale(0.75) translateY(20px); }
+    70%  { transform: scale(1.04) translateY(-4px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Fade in — testimonial cards stagger */
+@keyframes testimonialFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* === INITIAL HIDDEN STATES ===
+   Applied by JS before animation triggers.
+   Elements start invisible; .is-visible class fires the animation. */
+
+.anim-fade-up,
+.anim-slide-right,
+.anim-slide-left,
+.anim-scale-in,
+.anim-pop-in,
+.anim-testimony {
+    opacity: 0;
+}
+
+/* Visible state — added by IntersectionObserver */
+.anim-fade-up.is-visible {
+    animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.anim-slide-right.is-visible {
+    animation: slideInRight 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.anim-slide-left.is-visible {
+    animation: slideInLeft 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.anim-scale-in.is-visible {
+    animation: fadeScaleIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.anim-pop-in.is-visible {
+    animation: popIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.anim-testimony.is-visible {
+    animation: testimonialFadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Stagger delays — applied to nth children via JS or manually */
+.anim-delay-1 { animation-delay: 0.1s !important; }
+.anim-delay-2 { animation-delay: 0.22s !important; }
+.anim-delay-3 { animation-delay: 0.34s !important; }
+.anim-delay-4 { animation-delay: 0.46s !important; }
+.anim-delay-5 { animation-delay: 0.58s !important; }
+.anim-delay-6 { animation-delay: 0.70s !important; }
+
+
+
+
+/* === HERO SLIDER — Float image === */
+
+.slidee img {
+    animation: floatY 4s ease-in-out infinite;
+}
+
+
+/* === IMAGE BACKGROUND QUOTE — Slow pan === */
+
+.imagebg_text {
+    animation: bgPan 12s ease-in-out infinite;
+}
+
+
+
+/* === HOVER INTERACTIONS — Premium lifts & transitions === */
+
+/* Product cards — lift + shadow on hover */
+.products-options {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+}
+
+.products-options:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(33, 31, 28, 0.1);
+}
+
+.image-003 {
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+
+/* Testimonial cards — border glow on hover */
+.client-testimony {
+    transition: border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.client-testimony:hover {
+    border-color: #d47f31;
+    box-shadow: 0 8px 28px rgba(212, 127, 49, 0.12);
+    transform: translateY(-4px);
+}
+
+/* Value content cards — glow lift */
+.value-content {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.35s ease;
+}
+
+.value-content:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 36px rgba(33, 31, 28, 0.1);
+}
+
+/* Social icons — spin on hover */
+.socials-logo i {
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+.socials-logo i:hover {
+    transform: rotate(2deg) scale(1.12);
+}
+
+
+/* Button — scale on press */
+.button:active,
+.send-message:active,
+.add-to-cart:active {
+    transform: scale(0.96);
+}
+
+/* Page pagination — smooth scale */
+.page-btn {
+    transition: background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.page-btn:hover {
+    transform: scale(1.08);
+}
+
+/* Team member images — gentle zoom on hover */
+.image-002 {
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s ease;
+}
+
+.image-002:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 30px rgba(33, 31, 28, 0.15);
+}
+
+
+/* === REDUCE MOTION — Accessibility === */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

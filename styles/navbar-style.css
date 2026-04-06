@@ -1,0 +1,392 @@
+/* === RESET & BASE STYLES === */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h1, p {
+    margin: 0;
+}
+
+/* === BUTTON STYLES === */
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.email-subscribe-btn button,
+.slidee .button {
+    background-color: black;
+    color: white;
+    border: 0;
+}
+
+.email-subscribe-btn button {
+    height: 58px;
+}
+
+.email-subscribe-btn button:hover,
+.testimony-section .button:hover,
+.slidee .button:hover {
+    color: white;
+    background-color: black;
+}
+
+.testimony-section .button {
+    border: 1px solid black;
+    color: black;
+}
+
+.semi-header .button {
+    border: 1px solid white;
+}
+
+.button {
+    width: 130px;
+    height: 52px;
+    color: white;
+    background-color: transparent;
+    font-size: 1.1rem;
+    align-self: center;
+    transition: all .3s ease;
+}
+
+.button:hover {
+    color: black;
+    background-color: white;
+}
+
+/* === NAVBAR === */
+
+.header-section {
+    box-shadow: rgba(0, 0, 0, 0.075) 0px 2px 4px 0px;
+    width: 100%;
+}
+
+.nav-bar-section {
+    width: 95%;
+    margin: 0 auto;
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: .75rem;
+    font-weight: 700;
+    line-height: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #211f1c;
+}
+
+.list-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.list-option {
+    padding: 1px 5px;
+}
+
+.list-items a {
+    color: #61515b;
+    font-weight: 500;
+    transition: all .3s ease;
+    font-size: .87rem;
+}
+
+.list-items a:hover {
+    color: #211f1c;
+}
+
+/* .nav-link.active {
+    color: #211f1c;
+    font-weight: 700;
+} */
+
+.call-navbar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.call-section {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.phone {
+    font-size: 1rem;
+}
+
+.call-text {
+    font-size: 1.1rem;
+    color: #211f1c;
+    font-weight: 700;
+}
+
+/* === NAVBAR — MOBILE MENU HIDDEN ELEMENTS === */
+
+#hidden-logo {
+    display: none;
+}
+
+#menu-close-button {
+    display: none;
+}
+
+/* === FOOTER === */
+
+.footer-section {
+    width: 100%;
+    padding: 70px 0 0 0;
+    background-color: #211f1c;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* === FOOTER — TOP ROW (Logo + Nav Links) === */
+
+.semi-header,
+.semi-last-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.semi-header .logo-text,
+.semi-header .list-items a,
+.xl-bold,
+.semi-last-footer .l-bold {
+    color: #837A6D;
+}
+
+.semi-header .list-items a {
+    font-size: 1.1rem;
+}
+
+.semi-header .list-items a:hover {
+    color: white;
+}
+
+/* === FOOTER — MIDDLE ROW (Tagline + Socials) === */
+
+.xx-bold {
+    font-size: 3.7rem;
+    color: white;
+}
+
+.xl-bold {
+    display: flex;
+    flex-direction: column;
+}
+
+.xl-bold .l-bold {
+    font-size: 1.2rem;
+}
+
+.xl-bold .x-bold {
+    font-size: 1.8rem;
+}
+
+.socials-logo {
+    display: flex;
+    gap: 12px;
+}
+
+.socials-logo i {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    color: white;
+    border: 1px solid white;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.socials-logo i:hover {
+    background-color: white;
+    color: black;
+}
+
+.socials-logo .l-bold {
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.socials-logo .l-bold:hover {
+    color: white;
+}
+
+/* === FOOTER — BOTTOM ROW (Copyright + Policy Links) === */
+
+.semi-last-footer {
+    border-top: 1px solid #837A6D;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.semi-last-footer .anchor-text {
+    color: white;
+    text-decoration: none;
+}
+
+.semi-last-footer .anchor-text:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.semi-last-footer .l-bold {
+    line-height: 25px;
+}
+
+.max-width {
+    max-width: 500px;
+}
+
+/* === RESPONSIVE — TABLET & BELOW (max 1000px) === */
+
+@media screen and (max-width: 1000px) {
+
+    /* Navbar */
+
+    .nav-bar-section,
+    .footer-container {
+        width: 90%;
+        gap: 45px;
+    }
+
+    #menu-close-button,
+    #menu-open-button {
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    #menu-close-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    #hidden-logo {
+        display: block;
+    }
+
+    .list-items a {
+        font-size: 1.2rem;
+    }
+
+    .list-items {
+        flex-direction: column;
+        width: fit-content;
+        align-items: flex-start;
+    }
+
+    #header-navbar .list-items {
+        gap: 30px;
+        left: 20px;
+        top: 30px;
+        position: relative;
+    }
+
+    /* Mobile Menu Overlay */
+
+    #header-navbar {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        transition: right .5s ease;
+        z-index: 300;
+    }
+
+    body.show-mobile-menu #header-navbar {
+        right: 0;
+    }
+
+    /* Footer */
+
+    .semi-header {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .footer-container .list-option {
+        margin: 0;
+        padding: 0;
+    }
+
+    .semi-header .list-items {
+        gap: 35px;
+    }
+
+    .xx-bold {
+        font-size: 2.3rem;
+    }
+
+    .xl-bold .x-bold {
+        font-size: 1.45rem;
+    }
+
+    .xl-bold .l-bold {
+        font-size: 1.1rem;
+    }
+
+    .socials-logo {
+        gap: 15px;
+    }
+
+    .button {
+        align-self: flex-start;
+    }
+
+    .semi-last-footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
